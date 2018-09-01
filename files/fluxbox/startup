@@ -28,9 +28,11 @@ exec fluxbox &
 # or if you want to keep a log:
 # exec fluxbox -log "/home/quake3/.fluxbox/log"
 
+nm-applet &
+
 sleep 2
 if test ${default_route} -gt 0 ; then
-  nm-connection-editor
+  xterm -bg black -fg grey -bc -e /home/quake3/network-msg.sh
 fi
 
 quake3

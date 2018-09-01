@@ -122,10 +122,13 @@ libibus
 sdl2
 feh
 libexif
+libnotify
+network-manager-applet
 EOF
 
 # boot menu
 cp files/syslinux/* ./livecd/syslinux/
+cp files/efiboot/* ./livecd/efiboot/loader/entries/
 
 # ioquake3 package
 cp files/ioquake3*.tar.xz livecd/airootfs/root/ioquake3.tar.xz
@@ -149,6 +152,8 @@ fi
 mkdir livecd/airootfs/home/quake3/.fluxbox
 cp -R files/fluxbox/* livecd/airootfs/home/quake3/.fluxbox
 
+# Network setup message script
+cp files/network-msg.sh livecd/airootfs/home/quake3
 
 # Update customizations to the live environment
 cat >> ./livecd/airootfs/root/customize_airootfs.sh << EOF
@@ -181,9 +186,6 @@ EOF
 ## qconfig
 ##   detect and set resolution?
 
-
-## fluxbox 
-##  theme
 
 ## server:
 ## network up: launch quake server
