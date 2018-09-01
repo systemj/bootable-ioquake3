@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# Change your keymap:
+xmodmap "/home/quake3/.Xmodmap"
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+fbsetbg -a /home/quake3/.fluxbox/quake3-wallpaper.jpg
+
+sleep 1
+ip route | grep -q default
+default_route=$?
+
+exec fluxbox &
+# or if you want to keep a log:
+# exec fluxbox -log "/home/quake3/.fluxbox/log"
+
+sleep 2
+if test ${default_route} -gt 0 ; then
+  nm-connection-editor
+fi
+
+quake3
