@@ -124,6 +124,23 @@ feh
 libexif
 libnotify
 network-manager-applet
+xcb-util-keysyms
+xcb-util-wm
+libev
+yajl
+startup-notification
+xcb-util-renderutil
+xcb-util-image
+xcb-util-cursor
+xcb-util-xrm
+libxkbcommon-x11
+i3-gaps
+i3blocks
+i3lock
+confuse
+libasyncns
+libpulse
+i3status
 EOF
 
 # boot menu
@@ -149,10 +166,15 @@ if test -f files/baseq3/q3key ; then
 fi
 
 # Fluxbox config
-mkdir livecd/airootfs/home/quake3/.fluxbox
-cp -R files/fluxbox/* livecd/airootfs/home/quake3/.fluxbox
+#mkdir livecd/airootfs/home/quake3/.fluxbox
+#cp -R files/fluxbox/* livecd/airootfs/home/quake3/.fluxbox
 
-# Network setup message script
+# i3 config
+mkdir -p livecd/airootfs/home/quake3/.config/i3
+cp files/i3/*  livecd/airootfs/home/quake3/.config/i3
+
+# Network setup message and startup scripts
+cp files/startup.sh livecd/airootfs/home/quake3
 cp files/network-msg.sh livecd/airootfs/home/quake3
 
 # Update customizations to the live environment
@@ -177,7 +199,7 @@ chown -R quake3. /home/quake3
 # full sudo access
 echo "quake3 ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/quake3
 
-echo "exec startfluxbox" > /home/quake3/.xinitrc
+echo "exec i3" > /home/quake3/.xinitrc
 
 pacman --noconfirm -U /root/ioquake3.tar.xz
 
