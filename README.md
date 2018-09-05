@@ -11,15 +11,15 @@ Works with Quake III Arena or OpenArena game data.
 
 ## Quick Start:
 ```
-git clone https://github.com/systemj/ioquake3-bootable
-cd ioquake3-bootable
+git clone https://github.com/systemj/bootable-ioquake3
+cd bootable-ioquake3
 cp /your/game/data/*.pk3 files/baseq3
 ./build-iso.sh
 ```
 
 ## Usage
 
-The resulting ISO file is bootable as a DVD or USB image about 1.2GB in size.  The live system runs entirely from RAM once it starts up, so the same drive can be used to boot multiple computers.  Even copying the image to RAM it can run on a machine with as little as 1.5GB of memory.
+The resulting ISO file is bootable as a DVD or USB image about 1.2GB in size.  The live system runs entirely from RAM once it starts up, so the same drive can be used to boot multiple computers.  The live system requires a minimum of 2GB of RAM.
 
 To write to a USB drive:
 ```
@@ -74,6 +74,8 @@ https://gist.github.com/satreix/c01fd1cb5168e539404b
 The root and quake3 users do not have passwords, and a console logged in as root is available on tty1 (reachable via alt-ctrl-f1) if needed for troubleshooting or customization.  In the i3 window manager (seen if prompted to configure networking), additional terminals can be launched by pressing win+enter, and additional workspaces can be accessed by pressing win+# (default i3 keybindings with win key).
 
 Quitting the game will simply cycle back to starting the game again; pressing the power key should cause the system to shutdown gracefully.
+
+It's possible to use machines with as little as 768MB of memory if copytoram=y is removed from the kernel parameters (but then the drive must remain inserted).
 
 ## Related Links
 
