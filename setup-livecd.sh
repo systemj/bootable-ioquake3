@@ -4,11 +4,6 @@
 mkdir ./livecd
 cp -r /usr/share/archiso/configs/releng/* ./livecd 
 
-## TODO
-## fixup boot menu
-## client/server entries
-## custom logo
-
 # update packaged installed in the live environment
 cat >> ./livecd/packages.x86_64 << EOF
 xorg-xbacklight
@@ -165,10 +160,6 @@ if test -f files/baseq3/q3key ; then
   cp files/baseq3/q3key livecd/airootfs/home/quake3/.q3a/baseq3
 fi
 
-# Fluxbox config
-#mkdir livecd/airootfs/home/quake3/.fluxbox
-#cp -R files/fluxbox/* livecd/airootfs/home/quake3/.fluxbox
-
 # i3 config
 mkdir -p livecd/airootfs/home/quake3/.config/i3
 cp files/i3/*  livecd/airootfs/home/quake3/.config/i3
@@ -205,19 +196,10 @@ pacman --noconfirm -U /root/ioquake3.tar.xz
 
 EOF
 
-## qconfig
-##   detect and set resolution?
-
-
 ## server:
 ## network up: launch quake server
 ##   display IP on screen
 ## else run network setup
 ##   optional dhcp server
-
-
-
-
-
 
 
