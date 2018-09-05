@@ -31,5 +31,5 @@ cd livecd
 # Copy outout
 cp out/*.iso /iso
 
-#cd ..
-#rm -rf livecd
+cd ..
+rm -rf livecd
