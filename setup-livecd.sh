@@ -196,10 +196,3 @@ pacman --noconfirm -U /root/ioquake3.tar.xz
 
 EOF
 
-## server:
-## network up: launch quake server
-##   display IP on screen
-## else run network setup
-##   optional dhcp server
-
-

@@ -39,6 +39,7 @@ The keyboard audio and screen brightness keys should work as expected, and the v
 The game data for Quake III and Team Arena can be obtained from the official installation media or from your existing installation (sometimes in $HOME/.q3a).
 
 Form Quake III copy pak0.pk3 to bootable-ioquake3/files/baseq3 
+
 From Team Arena copy pak0.pak to bootable-ioquake3/files/missionpack
 
 You will also need the patch release files required to play Quake III on the current version of ioquake3.  They can be obtained from the ioquake3 website:
@@ -80,6 +81,8 @@ It's possible to use machines with as little as 768MB of memory if copytoram=y i
 ## Related Links
 
 https://ioquake3.org/
+
 http://www.openarena.ws
+
 https://wiki.archlinux.org/index.php/archiso
 
