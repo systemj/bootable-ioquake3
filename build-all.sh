@@ -26,7 +26,7 @@ cd /iso
 
 # Build the bootable image
 cd livecd
-./build.sh -v
+./build.sh -N ioquake -L ioquake3 -A ioquake3 -v
 
 # Copy outout
 cp out/*.iso /iso
