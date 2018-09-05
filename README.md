@@ -62,9 +62,9 @@ yourkeygoeshere
 OpenArena can be downloaded from the official site:
 http://www.openarena.ws/download.php
 
-Download the OpenArena v0.8.8 Win/Lin/Mac Unified and OpenArena v0.8.8 patch zip files.
+Download the OpenArena v0.8.8 Win/Lin/Mac Unified zip file.
 
-Extract the files and copy the .pk3 files from the baseoa directories to files/baseq3
+Extract the file and copy the .pk3 files from the baseoa directory to bootable-ioquake3/files/baseq3
 
 ## Additional Info
 
