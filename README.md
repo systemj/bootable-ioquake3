@@ -4,9 +4,10 @@ A bootable live image for ioquake3-based LAN parties!
 Works with Quake III Arena or OpenArena game data.
 
 
-## Requirements
+## Build Requirements
 * Docker
 * Game data
+* ~4GB disk space
 
 
 ## Quick Start:
@@ -77,6 +78,10 @@ The root and quake3 users do not have passwords, and a console logged in as root
 Quitting the game will simply cycle back to starting the game again; pressing the power key should cause the system to shutdown gracefully.
 
 It's possible to use machines with as little as 768MB of memory if copytoram=y is removed from the kernel parameters (but then the drive must remain inserted).
+
+The current scripts are setup to build x86_64 images only, but i686 should be possible.
+
+During the build process the various stages may take up around 4GB until everything is cleaned up at the end.
 
 ## Related Links
 
