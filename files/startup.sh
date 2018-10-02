@@ -16,5 +16,17 @@ if test -n "${sound_card}" ; then
 	EOF
 fi
 
-quake3
+# Run a server instance in addition to the client
+if grep "run-q3server" /proc/cmdline ; then
+  xterm -bg black -fg grey -bc -e /home/quake3/quake3-server.sh &
+  sleep 3
+  while pgrep ioq3ded >/dev/null
+    do
+    quake3
+  done
+else
+  # default mode (client only)
+  quake3
+fi
+
 exit 0

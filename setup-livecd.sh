@@ -168,6 +168,9 @@ if test -f files/baseq3/q3key ; then
   cp files/baseq3/q3key livecd/airootfs/home/quake3/.q3a/baseq3
 fi
 
+# server.cfg
+cp files/baseq3/server.cfg livecd/airootfs/home/quake3/.q3a/baseq3
+
 # i3 config
 mkdir -p livecd/airootfs/home/quake3/.config/i3
 cp files/i3/*  livecd/airootfs/home/quake3/.config/i3
@@ -175,6 +178,7 @@ cp files/i3/*  livecd/airootfs/home/quake3/.config/i3
 # Network setup message and startup scripts
 cp files/startup.sh livecd/airootfs/home/quake3
 cp files/network-msg.sh livecd/airootfs/home/quake3
+cp files/quake3-server.sh livecd/airootfs/home/quake3
 
 # Update customizations to the live environment
 cat >> ./livecd/airootfs/root/customize_airootfs.sh << EOF

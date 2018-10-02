@@ -24,6 +24,9 @@ cp /home/build/ioquake3-git/ioquake3*.tar.xz /iso/files
 cd /iso
 ./setup-livecd.sh
 
+# Replace the default build.sh
+cp build.sh ./livecd/build.sh
+
 # Build the bootable image
 cd livecd
 ./build.sh -N ioquake3 -L ioquake3 -A ioquake3 -v
